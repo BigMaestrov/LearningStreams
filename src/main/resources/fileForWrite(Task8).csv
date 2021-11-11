@@ -1,0 +1,79 @@
+{A5 | Audi | 1998 | Maroon}
+{A8 | Audi | 2008 | Red}
+{TT | Audi | 2005 | Red}
+{Century | Buick | 2009 | Goldenrod}
+{Roadmaster | Buick | 2006 | Aquamarine}
+{Skylark | Buick | 2008 | Blue}
+{SRX | Cadillac | 1998 | Aquamarine}
+{Escalade EXT | Cadillac | 2003 | Red}
+{Escalade ESV | Cadillac | 2010 | Goldenrod}
+{SRX | Cadillac | 2007 | Blue}
+{Camaro | Chevrolet | 2008 | Red}
+{Prizm | Chevrolet | 2005 | Mauv}
+{Vega | Chevrolet | 2010 | Green}
+{Camaro | Chevrolet | 2010 | Mauv}
+{G-Series G20 | Chevrolet | 2007 | Maroon}
+{Silverado 1500 | Chevrolet | 2009 | Teal}
+{Cobalt | Chevrolet | 2004 | Fuscia}
+{Express 1500 | Chevrolet | 2000 | Indigo}
+{LHS | Chrysler | 2003 | Yellow}
+{Avenger | Dodge | 1999 | Yellow}
+{Ram 50 | Dodge | 2007 | Maroon}
+{Ram 1500 | Dodge | 2008 | Mauv}
+{Neon | Dodge | 2009 | Yellow}
+{Viper | Dodge | 2009 | Pink}
+{D250 | Dodge | 2005 | Red}
+{Grand Caravan | Dodge | 2010 | Purple}
+{Journey | Dodge | 2004 | Teal}
+{Ram 3500 | Dodge | 2007 | Orange}
+{C-MAX Hybrid | Ford | 2009 | Red}
+{Explorer | Ford | 2006 | Green}
+{Mustang | Ford | 2003 | Mauv}
+{Escape | Ford | 1998 | Red}
+{Aerostar | Ford | 2003 | Teal}
+{Escape | Ford | 1999 | Maroon}
+{Sierra 1500 | GMC | 2001 | Maroon}
+{Envoy | GMC | 2004 | Orange}
+{3500 Club Coupe | GMC | 2006 | Green}
+{Storm | Geo | 2000 | Purple}
+{Tracker | Geo | 2004 | Aquamarine}
+{del Sol | Honda | 2009 | Turquoise}
+{Accent | Hyundai | 2006 | Crimson}
+{Optima | Kia | 2004 | Green}
+{Optima | Kia | 2003 | Mauv}
+{Spectra | Kia | 2006 | Red}
+{RX Hybrid | Lexus | 2008 | Goldenrod}
+{ES | Lexus | 1999 | Orange}
+{GX | Lexus | 2004 | Yellow}
+{Town Car | Lincoln | 2007 | Orange}
+{Continental | Lincoln | 2004 | Mauv}
+{MKX | Lincoln | 2010 | Violet}
+{MPV | Mazda | 2007 | Goldenrod}
+{MPV | Mazda | 2007 | Crimson}
+{R-Class | Mercedes-Benz | 2008 | Crimson}
+{S-Class | Mercedes-Benz | 2003 | Crimson}
+{SLR McLaren | Mercedes-Benz | 1999 | Maroon}
+{E-Class | Mercedes-Benz | 1999 | Blue}
+{CL-Class | Mercedes-Benz | 2000 | Fuscia}
+{Grand Marquis | Mercury | 2005 | Orange}
+{Sable | Mercury | 1998 | Fuscia}
+{Cougar | Mercury | 2009 | Puce}
+{Cougar | Mercury | 2004 | Blue}
+{Cougar | Mercury | 2006 | Teal}
+{Chariot | Mitsubishi | 2010 | Orange}
+{Lancer | Mitsubishi | 2010 | Turquoise}
+{Grand Prix | Pontiac | 1999 | Crimson}
+{6000 | Pontiac | 1999 | Khaki}
+{Grand Prix | Pontiac | 2001 | Aquamarine}
+{Firebird | Pontiac | 1998 | Green}
+{2500 | Ram | 2002 | Blue}
+{3500 | Ram | 2010 | Goldenrod}
+{9-3 | Saab | 2001 | Blue}
+{9-7X | Saab | 2008 | Maroon}
+{900 | Saab | 2008 | Orange}
+{Daewoo Magnus | Suzuki | 1998 | Pink}
+{Swift | Suzuki | 2007 | Indigo}
+{Equator | Suzuki | 2001 | Turquoise}
+{Forenza | Suzuki | 2009 | Turquoise}
+{Avalon | Toyota | 2010 | Aquamarine}
+{Matrix | Toyota | 1998 | Khaki}

@@ -8,6 +8,11 @@ public class CarMaker {
     private String carMakerName;
     private List<Car> carList;
 
+    public CarMaker(String s, List<Car> cars) {
+        setCarMakerName(s);
+        setCarList(cars);
+    }
+
     @Override
     public String toString(){
         String cars ="";
