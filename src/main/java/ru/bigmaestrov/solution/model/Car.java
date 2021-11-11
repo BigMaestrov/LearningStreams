@@ -11,7 +11,10 @@ public class Car {
 
     @Override
     public String toString(){
-        return getCarModel()+" "+getCarMaker()+" "+getCarModelYear()+" "+getColor();
+        return "{"+getCarModel()+" | "+getCarMaker()+" | "+getCarModelYear()+" | "+getColor()+"}";
     }
 
+    public boolean isCorrectCar(){
+        return !(getColor().equals("") || getCarModel().equals("") || getCarModelYear().equals("") || getCarMaker().equals(""));
+    }
 }
