@@ -6,9 +6,9 @@ import java.io.Serializable;
 import java.util.Comparator;
 
 @Data
-public class Car implements Comparable<Car> {
+public class Car {
     private String carModel;
-    private String carMaker;
+    private CarMaker carMaker;
     private String carModelYear;
     private String color;
 
@@ -17,12 +17,7 @@ public class Car implements Comparable<Car> {
         return "{"+getCarModel()+" | "+getCarMaker()+" | "+getCarModelYear()+" | "+getColor()+"}";
     }
 
-    public boolean isCorrectCar(){
+    public boolean hasEmptyField(){
         return !(getColor().equals("") || getCarModel().equals("") || getCarModelYear().equals("") || getCarMaker().equals(""));
-    }
-
-    @Override
-    public int compareTo(Car car) {
-        return carMaker.compareTo(car.carMaker);
     }
 }
