@@ -13,12 +13,16 @@ public class CarMaker {
         setCarList(cars);
     }
 
+    public CarMaker(CarMaker carMaker) {
+        this(carMaker.getCarMakerName(), carMaker.getCarList());
+    }
+
     @Override
     public String toString(){
         String cars ="";
         for(int i=0;i<carList.size();i++){
             cars+="["+carList.get(i).toString()+"]";
         }
-        return getCarMakerName()+": {"+cars+"}";
+        return getCarMakerName()+": "+cars;
     }
 }
