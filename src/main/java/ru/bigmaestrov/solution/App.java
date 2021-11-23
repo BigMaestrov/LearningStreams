@@ -27,15 +27,15 @@ public class App {
             Map<String, List<Car>> carsGroupByColor = groupingByColors(products);
             writeInFile(filePath6, carsGroupByColor);
             //Задание 7
-            Map<CarMaker, List<Car>> carsGroupByMaker = groupingByMaker(products);
-            List<CarMaker> carMakers = convertCarMapToCarMakerList(carsGroupByMaker);
+            Map<String, List<Car>> carsGroupByMaker = groupingByMaker(products);
+            List<String> carMakers = convertCarMapToCarMakerList(carsGroupByMaker);
             writeCarMakerInFile(filePath7, carsGroupByMaker);
             printCarMakers(carMakers);
             //Задание 8
             List<Car> cars = products;
             deleteLowCarMaker(cars, carsGroupByMaker);
-            Collections.sort(cars);
-            writeInFile(filePath8,cars);
+            //Collections.sort(cars);
+            writeInFile(filePath8, sortCars(cars));
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -66,7 +66,7 @@ public class App {
             }
             Car car = new Car();
             car.setCarModel(columnList.get(0));
-            car.setCarMaker(new CarMaker(columnList.get(1), new ArrayList<Car>()));
+            car.setCarMaker(columnList.get(1));
             car.setCarModelYear(columnList.get(2));
             car.setColor(columnList.get(3));
             if (car.hasEmptyField()) {
@@ -87,30 +87,32 @@ public class App {
     }
 
     //Построчный вывод в файл
-    public static void writeCarMakerInFile(String filePath, Map<CarMaker, List<Car>> cars) throws IOException {
+    public static void writeCarMakerInFile(String filePath, Map<String, List<Car>> cars) throws IOException {
         FileWriter writer = new FileWriter(filePath);
-        for (Map.Entry<CarMaker, List<Car>> carMaker : cars.entrySet()) {
+        for (Map.Entry<String, List<Car>> carMaker : cars.entrySet()) {
             writer.write(carMaker.toString() + "\n");
         }
         writer.close();
     }
 
-    public static void writeCarMakerInFile(String filePath, List<CarMaker> carMakers) throws IOException {
+    public static void writeCarMakerInFile(String filePath, List<String> carMakers) throws IOException {
         FileWriter writer = new FileWriter(filePath);
-        for (CarMaker carMaker : carMakers) {
+        for (String carMaker : carMakers) {
             writer.write(carMaker.toString() + "\n");
         }
         writer.close();
     }
 
     //преобразование карты машин в список производителей
-    public static List<CarMaker> convertCarMapToCarMakerList(Map<CarMaker, List<Car>> carsGroup) {
-        List<CarMaker> keyList = new ArrayList<CarMaker>(carsGroup.keySet());
-        List<CarMaker> carMakerList = new ArrayList<CarMaker>();
+    public static List<String> convertCarMapToCarMakerList(Map<String, List<Car>> carsGroup) {
+        /*
+        List<String> keyList = new ArrayList<String>(carsGroup.keySet());
+        List<String> carMakerList = new ArrayList<String>();
         for (int i = 0; i < carsGroup.size(); i++) {
-            carMakerList.add(new CarMaker(keyList.get(i)));
+            carMakerList.add(keyList.get(i));
         }
-        return carMakerList;
+        return carMakerList;*/
+        return carsGroup.keySet().stream().collect(Collectors.toList());
     }
 
     //Построчный вывод в файл
@@ -128,17 +130,17 @@ public class App {
     }
 
     //Группировка машин по производителю
-    public static Map<CarMaker, List<Car>> groupingByMaker(List<Car> cars) {
+    public static Map<String, List<Car>> groupingByMaker(List<Car> cars) {
         return cars.stream().collect(Collectors.groupingBy(Car::getCarMaker));
     }
 
-    public static void printCarMakers(List<CarMaker> carMakers) {
+    public static void printCarMakers(List<String> carMakers) {
         System.out.println(carMakers.stream()
-                .map(CarMaker::getCarMakerName)
+                .map(String::toString)
                 .collect(Collectors.joining(", ")));
     }
 
-    public static List<Car> deleteLowCarMaker(List<Car> cars, Map<CarMaker, List<Car>> carMakers) {
+    public static List<Car> deleteLowCarMaker(List<Car> cars, Map<String, List<Car>> carMakers) {
         for (int i = 0; i < cars.size(); i++) {
             if (carMakers.get(cars.get(i).getCarMaker()).size() < 2) {
                 cars.remove(i);
@@ -147,8 +149,12 @@ public class App {
         return cars;
     }
 
+    public static List<Car> sortCars(List<Car> cars) {
+        return cars.stream().sorted(Comparator.comparing(Car::getCarMaker)).collect(Collectors.toList());
+    }
+
     public static List<CarMaker> deleteLowCarMaker(List<CarMaker> carMakers) {
-        return carMakers.stream().filter(x -> x.getCarList().size() <2 ).collect(Collectors.toList());
+        return carMakers.stream().filter(x -> x.getCarList().size() < 2).collect(Collectors.toList());
     }
 
 }
